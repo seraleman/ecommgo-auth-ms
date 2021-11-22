@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+from .sensible import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9b!@)h%_+erma=23cv$8e^&)r2&wqfkz5bh6!+6q*b6l^35uyp'
+# Acá pones tu clave secreta
+# SECRET_KEY =''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -99,16 +101,18 @@ WSGI_APPLICATION = 'authMsProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6c2l8knnjk5b5',
-        'USER': 'vobrhxxllirtga',
-        'PASSWORD': 'a3493e9f4da183f0b20a8f948a2d936439885f70487e0db7a1c2c9cfdd0bd425',
-        'HOST': 'ec2-107-22-245-82.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+# En este espacio conectas tu base de datos
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': '',
+#         'NAME': '',
+#         'USER': '',
+#         'PASSWORD': '',
+#         'HOST': '',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
