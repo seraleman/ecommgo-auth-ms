@@ -8,6 +8,11 @@ from rest_framework import views
 
 class UserView(views.APIView):
 
+    def get(self, request, format=None):
+        users = User.objects.all()
+        seriliazer = UserSerializer(users, many= True)
+        return Response(seriliazer.data)
+
     def put(self, request, pk, format=None):
         
         user = User.objects.get(pk=pk)
